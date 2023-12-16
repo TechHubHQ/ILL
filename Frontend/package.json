@@ -20,7 +20,9 @@
     "start:frontend": "cd ../Frontend && react-scripts start",
     "start:backend": "cd ../Backend && python server.py",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:prod": "cd ../Frontend && react-scripts build",
+    "build:qa": "cd ../Frontend && REACT_APP_ENV=qa react-scripts build"
   },
   "eslintConfig": {
     "extends": [
