@@ -5,10 +5,11 @@
 .App-logo {
   height: 70vmin;
   pointer-events: none;
+  filter: drop-shadow(4px 4px 4px rgba(4, 166, 230, 0.5));
 }
 
 .App-header {
-  background-color: #040404;
+  background-color: #0e0e0e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

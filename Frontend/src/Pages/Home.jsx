@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
-import '../Styles/Home.css'; // Import the CSS file
+import '../Styles/PageStyles/Home.css'; // Import the CSS file
 
 const Home = () => {
   const title = 'Welcome to ILL';
