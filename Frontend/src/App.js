@@ -1,5 +1,5 @@
 import logo from './HomepageLogo.png';
-import './App.css';
+import './Styles/App.css';
 import './Pages/Home'
 
 function App() {
