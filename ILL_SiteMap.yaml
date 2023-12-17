@@ -1,0 +1,108 @@
+- **Home**
+
+  - Sign In
+    - [ ] Enter username
+    - [ ] Enter password
+    - [ ] Click "Sign In" button
+  - Sign Up
+    - [ ] Create a new account form
+      - [ ] Fields for username, email, password, and account type
+      - [ ] AI-based spam detection
+      - [ ] Implement email verification
+      - [ ] Store user information in a database
+      - [ ] Display confirmation message after successful sign up
+      - [ ] AI-based chat support for assistance
+
+  - Explore Courses
+    - AI-based recommendation system
+      - Course Category 1
+      - Course Category 2
+      - ...
+  - Search Courses
+  - Featured Courses
+    - Dynamically updated based on AI analysis of user behavior and trends
+  - Testimonials
+  - About Us
+  - Contact Us
+
+- **Dashboard**
+
+  - Profile Overview
+    - Profile Picture
+    - Name
+    - Account Type (Teacher/Student)
+    - Edit Profile
+  - Goals
+    - Set Goals with AI-driven suggestions
+    - Track Progress
+  - Enrolled Courses
+    - Course 1
+      - Course Overview
+      - Progress
+      - Assignments
+      - Discussions
+    - Course 2
+      - ...
+  - Tasks
+    - Pending Tasks
+    - Completed Tasks
+  - Time Tracker
+    - Total Time Spent
+    - Time per Course
+  - Notifications
+    - System Notifications
+    - Course Updates
+    - Messages with personalized AI recommendations
+
+- **Course**
+
+  - Course Overview
+    - Description
+    - Instructor
+    - Ratings
+    - Reviews with sentiment analysis
+  - Modules
+    - Module 1
+      - Lessons
+        - Lesson 1
+          - Video
+          - Resources
+          - Assignments
+        - Lesson 2
+          - ...
+    - Module 2
+      - ...
+  - Integrated Code Editor
+    - Practice Coding
+    - Assignments with AI-driven code analysis
+    - Code Challenges
+
+- **Chat**
+
+  - General Chat
+  - Course-specific Chat
+  - Private Messages
+  - Chatbot
+    - FAQs with AI-generated responses
+    - Assistance using AI API for general and course-specific queries
+
+- **Settings**
+
+  - Account Settings
+    - Change Password
+    - Security Settings
+  - Notification Preferences
+    - AI-based optimization of timing and type of notifications
+  - Privacy Settings
+  - Billing Information
+    - Subscription
+    - Payment History
+
+- **HelpAndSupport**
+  - FAQs
+    - AI-driven responses to common questions
+  - Contact Support
+  - Report an Issue
+  - User Guides
+
+- **Logout**
