@@ -1,0 +1,51 @@
+{
+  "name": "ill",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^8.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "install:app": "npm install && cd Backend && pip install -r requirements.txt",
+    "install:frontend": "npm install",
+    "install:backend": "cd Backend && pip install -r requirements.txt",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd Frontend && react-scripts start",
+    "start:backend": "cd Backend && python server.py",
+    "test": "cd Frontend && npm test",
+    "eject": "cd Frontend && react-scripts eject",
+    "build:prod": "cd Frontend && react-scripts build",
+    "build:qa": "cd Frontend && REACT_APP_ENV=qa react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6"
+  }
+}

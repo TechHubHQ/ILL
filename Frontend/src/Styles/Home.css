@@ -1,0 +1,39 @@
+/* Assuming a simple layout for the Home page */
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .home-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .home-navigation {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .home-navigation li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .home-navigation a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .home-navigation a:hover {
+    color: #0056b3;
+  }
