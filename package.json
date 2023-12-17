@@ -9,11 +9,12 @@
     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.21.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "install:all": "npm install && cd Backend && pip install -r requirements.txt",
+    "install:app": "npm install && cd Backend && pip install -r requirements.txt",
     "install:frontend": "npm install",
     "install:backend": "cd Backend && pip install -r requirements.txt",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
@@ -23,12 +24,6 @@
     "eject": "cd Frontend && react-scripts eject",
     "build:prod": "cd Frontend && react-scripts build",
     "build:qa": "cd Frontend && REACT_APP_ENV=qa react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -41,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
