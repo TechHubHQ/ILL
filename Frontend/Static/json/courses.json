@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Computer Science",
+        "description": "Explore the fundamentals of computer science and programming.",
+        "image": "../../../Frontend/Static/images/Cs.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=Cu3R5it4cQs&list=PL4316FC411AD077AA"
+    },
+    {
+        "title": "Mathematics",
+        "description": "Dive into the world of mathematics and problem-solving.",
+        "image": "../../../Frontend/Static/images/Maths.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=JbhBdOfMEPs&list=PLybg94GvOJ9FoGQeUMFZ4SWZsr30jlUYK"
+    },
+    {
+        "title": "Physics",
+        "description": "Explore the principles of physics and understand the natural world.",
+        "image": "../../../Frontend/Static/images/phy.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=OoO5d5P0Jn4&list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV"
+    },
+    {
+        "title": "Photography",
+        "description": "Capture the world through your lens with our Photography course.",
+        "image": "../../../Frontend/Static/images/photography.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=dwrGAoZIrOw&list=PL7W5udALs-AlIByQQ8KnleHQdKq_9m0vD"
+    },
+    {
+        "title": "Cybersecurity",
+        "description": "Understand the essentials of cybersecurity, covering topics like network security, encryption, and ethical hacking.",
+        "image": "../../../Frontend/Static/images/cybersecurity.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=lpa8uy4DyMo&list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_"
+    },
+    {
+        "title": "Artificial Intelligence",
+        "description": "Delve into the foundations of artificial intelligence, machine learning, and their real-world applications.",
+        "image": "../../../Frontend/Static/images/ai.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=4jmsHaJ7xEA&list=PL9ooVrP1hQOGHNaCT7_fwe9AabjZI1RjI"
+    },
+    {
+        "title": "Graphic Designing",
+        "description": "Learn the fundamentals of graphic design, including principles of design, typography, and using graphic design software.",
+        "image": "../../../Frontend/Static/images/graphicdesigning.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=WONZVnlam6U&list=PLYfCBK8IplO4E2sXtdKMVpKJZRBEoMvpn"
+    },
+    {
+        "title": "Music Appreciation and Theory",
+        "description": "Explore the world of music, covering music theory, appreciation of different genres, and basics of composition.",
+        "image": "../../../Frontend/Static/images/music.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=5_yOVARO2Oc&list=PLh9mgdi4rNezhx8YiGIV8I22ICSuzslja"
+    },
+    {
+        "title": "Introduction to Data Science",
+        "description": "Explore the basics of data science, including data analysis, visualization, and machine learning concepts.",
+        "image": "../../../Frontend/Static/images/datascience.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=-ETQ97mXXF0"
+    },
+    {
+        "title": "Health and Wellness",
+        "description": "Explore holistic health and wellness practices, covering physical fitness, nutrition, and mental well-being.",
+        "image": "../../../Frontend/Static/images/health.jpeg",
+        "youtubeLink": "https://www.youtube.com/watch?v=3nPWVV-lYEw&list=PLBebQNt5Ghq3ppyBSrmn5Yy6scErdHFWb"
+    },
+    {
+        "title": "Digital Photography and Editing",
+        "description": "Explore the art and techniques of digital photography, including composition, lighting, and post-processing with photo editing tools.",
+        "image": "../../../Frontend/Static/images/digital-marketing.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=jFfd0RYax5k&list=PL7JpMMpENaD3KL_lvmw4eS5U5AD746yKB"
+    },
+    {
+        "title": "Foreign Language Learning (e.g., Spanish, French)",
+        "description": "Begin your journey into learning a new language, covering basic vocabulary, grammar, and cultural aspects.",
+        "image": "../../../Frontend/Static/images/languages.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=cctA8tkRY3M&list=PLOVSdvQtun0r91XZQuqk109Rjx7Dqw6nb"
+    },
+    {
+        "title": "Environmental Science",
+        "description": "Explore environmental issues, sustainability, and the impact of human activities on the planet.",
+        "image": "../../../Frontend/Static/images/e-science.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=5QWGWP53TRs&list=PLpuxPG4TUOR4deSSMx8_ofr1kJ4FhIdwD"
+    },
+    {
+        "title": "Business English",
+        "description": "Boost your professional communication skills with our Business English Language course. Tailored for success in a corporate environment, this program hones language proficiency for effective business writing, presentations, and networking.",
+        "image": "../../../Frontend/Static/images/business.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=e7n2K5gR-rk&list=PLh0bLFae5jipDeSAGuT4yjdp_ZkoGQGEl"
+    },
+    {
+        "title": "Digital Marketing",
+        "description": "Learn the fundamentals of digital marketing, including social media marketing, search engine optimization (SEO), and online advertising.",
+        "image": "../../../Frontend/Static/images/digital-marketing.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=nkNHn0VqVBA&list=PL9ooVrP1hQOH-nMMFeSG-DFwyATtUg4YA"
+    },
+    {
+        "title": "Introduction to Finance",
+        "description": "Understand the basics of finance, including financial management, investment strategies, and financial analysis.",
+        "image": "../../../Frontend/Static/images/finance.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=Rpa_UAciIeU&list=PLSlzC-HFo7w5MA7vJy_m6T5ub_UvB2d10"
+    },
+    {
+        "title": "Engineering Ethics",
+        "description": "Dive into ethical considerations in various professions, covering topics such as professional conduct, integrity, and responsible decision-making.",
+        "image": "../../../Frontend/Static/images/ethics.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=gyHxjOjwnws&list=PLmqfvqANNTLDJHOVz4eCZTmcotQQP8rCu"
+    },
+    {
+        "title": "Network Fundamentals and Protocols",
+        "description": "Explore the foundational concepts of computer networks, including the OSI model, TCP/IP protocols, and basic network design principles. Learn about data transmission, network addressing, and common network protocols.",
+        "image": "../../../Frontend/Static/images/networks.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=9SIjoeE93lo&list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8"
+    }
+]

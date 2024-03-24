@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/keyboard": "off",
+    "axe/forms": "off",
+    "axe/text-alternatives": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+    "axe/aria": "off",
+    "axe/structure": "off",
+    "no-inline-styles": "off",
+    "meta-viewport": "off",
+    "css-prefix-order": "off",
+    "disown-opener": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 17",
+    "not safari <= 17"
+  ]
+}

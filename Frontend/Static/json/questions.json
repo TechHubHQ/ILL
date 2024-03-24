@@ -1,0 +1,18 @@
+[
+    {
+      "question": "What is the capital of France?",
+      "options": ["London", "Paris", "Berlin", "Madrid"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Mars", "Jupiter", "Earth", "Saturn"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which is the national bird of India?",
+      "options": ["Peacock", "Eagle", "Sparrow", "Pigeon"],
+      "correctIndex": 0
+    }
+  ]
+  

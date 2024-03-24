@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/courses.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>  
+
+    <header>
+        <h1>Courses on College LMS</h1>
+    </header>
+
+    <div class="courses-container">
+        <!-- Course cards will be rendered here -->
+    </div>
+
+    <script src="{{ url_for('static', path='js/courses.js') }}"></script>
+</body>
+</html>

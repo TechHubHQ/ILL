@@ -1,0 +1,239 @@
+/* Netflix-like styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #141414;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #b81b1b;
+}
+
+.sidebar {
+    background-color: #1c1c1c;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+    color: #b81b1b;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main-content section {
+    margin-bottom: 20px;
+}
+
+.main-content section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main-content section p {
+    line-height: 1.6;
+}
+/* Styles for input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styles for buttons */
+.btn-submit,
+.btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-cancel:hover {
+    background-color: #cc0a10; /* Darker Netflix red */
+}
+
+/* Additional styles for sidebar links */
+.sidebar-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styles for input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #333; /* Adjust to match Netflix input field style */
+    border-radius: 4px;
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Text color */
+    background-color: #000; /* Black background color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #e50914; /* Netflix red */
+    outline: none;
+}
+
+/* Styles for buttons */
+.btn-submit,
+.btn-cancel {
+    padding: 12px 24px;
+    border: none;
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px; /* Adjust font size */
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-cancel:hover {
+    background-color: #b2070f; /* Darker Netflix red */
+}
+
+/* Additional styles for sidebar links */
+.sidebar-link {
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white; /* Text color */
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Adjust font size */
+}
+
+.sidebar-link:hover {
+    background-color: #e50914; /* Netflix red */
+}
+
+/* Styles for active sidebar link */
+.sidebar-link.active {
+    background-color: #b2070f; /* Darker Netflix red */
+    font-weight: bold;
+}
+
+/* Styles for sidebar container */
+.sidebar {
+    width: 250px; /* Adjust sidebar width */
+    background-color: #000; /* Black background color */
+    padding-top: 20px;
+}
+
+/* Styles for main content */
+.main-content {
+    padding: 20px;
+    margin-left: 270px; /* Adjust margin to accommodate wider sidebar */
+}
+
+/* Additional styles for buttons */
+button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px; /* Adjust font size */
+}
+
+button:hover {
+    background-color: #b2070f; /* Darker Netflix red */
+}

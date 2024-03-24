@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='styles/profile.css') }}">
+</head>
+
+<body>
+
+  <section class="container">
+
+    <h2>User Profile</h2>
+
+<div class="profile-details">
+            <div class="profile-picture">
+                <img src="{{ url_for('static', path='images/profile-pic.jpeg') }}" alt="Profile Picture">
+                <button class="change-profile-btn">Change Profile Picture</button>
+            </div>
+            <div class="user-info">
+                <h3>John Doe</h3>
+                <p>Email: john.doe@example.com</p>
+                <p>Gender: Male</p>
+                <p>Date of Birth: January 1, 1990</p>
+                <p>Country: United States</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank">johndoe</a></p>
+                <p>GitHub: <a href="https://github.com" target="_blank">johndoe</a></p>
+                <input type="file" id="imageUploadInput" style="display: none;">
+                <button id="uploadImageButton">Upload Image</button>
+            </div>
+        </div>
+
+        <div class="personal-summary">
+            <h3>Personal Summary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod ligula at dapibus consequat. Sed ut justo a leo ultricies commodo. Suspendisse potenti. Sed eget varius libero. Nulla facilisi.</p>
+        </div>
+
+        <div class="achievements">
+            <h3>Achievements</h3>
+            <ul>
+                <li>Winner of Coding Competition, 2021</li>
+                <li>Honor Roll Student, 2019-2022</li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: Java, Python, JavaScript</li>
+                <li>Web Development: HTML, CSS, React</li>
+                <li>Data Analysis: SQL, Pandas, NumPy</li>
+            </ul>
+        </div>
+
+        <div class="interests">
+            <h3>Interests</h3>
+            <ul>
+                <li>Reading</li>
+                <li>Hiking</li>
+                <li>Playing Guitar</li>
+            </ul>
+        </div>
+
+        <div class="courses-list">
+            <h3>Enrolled Courses</h3>
+            <ul>
+                <li>Introduction to Computer Science</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Development Fundamentals</li>
+            </ul>
+        </div>
+
+        <div class="academic-information">
+            <h3>Academic Information</h3>
+            <ul>
+                <li>Enrollment/Provisional Number : 12345678</li>
+                <li>Specialization : Computer Science</li>
+                <li>Program Registered For : Bachelor of Computer Science (Online Mode)</li>
+            </ul>
+        </div>
+
+        <a href="#" class="cta-button">Edit Profile</a>
+    </section>
+  
+  <!-- Script to show file picker -->
+  <script>
+
+    const input = document.getElementById('profileInput');
+    const img = document.getElementById('profilePic');
+
+    input.addEventListener('change', function() {
+      const file = this.files[0];
+      
+      if(file) {
+        const reader = new FileReader();
+        reader.onload = function() {
+          img.src = reader.result; 
+        }
+        reader.readAsDataURL(file); 
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

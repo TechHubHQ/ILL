@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/landing.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>ILL College LMS</h1>
+        <div class="logo-container">
+            <img class="header-logo" src="../../../public/images/logo.png" alt="Logo">
+        </div>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>
+    
+    <section class="container" id="main-content">
+        <div class="ill-content">
+            <h2>ILL Announcements!</h2>        
+            <div class="announcement-row">
+                <div class="announcement">
+                    <p>Holiday List</p>
+                    <button type="submit"><a href="./holidays.html">Get Now!</a></button>
+                </div>
+    
+                <div class="announcement">
+                    <p>Semester Time-Table</p>
+                    <button type="submit"><a href="./timetable.html">Get Now!</a></button>
+                </div>
+    
+                <div class="announcement">
+                    <p>Sports Registration</p>
+                    <button type="submit"><a href="./sportsform.html">Register Now!</a></button>
+                </div>
+            </div>
+    
+            <div class="announcement-row">
+                <div class="announcement">
+                    <p>Fee Payment</p>
+                    <button type="submit"><a href="./paymain.html">Pay Now!</a></button>
+                </div>
+    
+                <div class="announcement">
+                    <p>Library Updates</p>
+                    <button type="submit"><a href="./library_updates.html">Check Now!</a></button>
+                </div>
+    
+                <div class="announcement">
+                    <p>Guest Lecture</p>
+                    <button type="submit"><a href="./guest_lecture.html">Details Here!</a></button>
+                </div>
+            </div>
+    
+            <div class="announcement-row">
+                <div class="announcement">
+                    <p>Idea Hub</p>
+                    <button type="submit"><a href="./ideahud.html">Share Now!</a></button>
+                </div>
+
+                <div class="announcement">
+                    <p>Yoga and Wellness Sessions for Students</p>
+                    <button type="submit"><a href="./yoga_wellness_sessions.html">Join Now!</a></button>
+                </div>
+
+                <div class="announcement">
+                    <p>Interactive Webinars for Academic Success</p>
+                    <button type="submit"><a href="./webinars_for_academic_success.html">Join Now!</a></button>
+                </div>
+        </div>
+        
+       
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ILL College LMS</p>
+        <p class="support">iLL integrated Support - <a href="support.html">Click Here</a></p>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('home-link').addEventListener('click', function () {
+            window.location.href = 'home.html';
+        });
+
+        document.getElementById('courses-link').addEventListener('click', function () {
+            window.location.href = 'courses.html';
+        });
+
+        document.getElementById('assignments-link').addEventListener('click', function () {
+            window.location.href = 'assignments.html';
+        });
+
+        document.getElementById('profile-link').addEventListener('click', function () {
+            window.location.href = 'profile.html';
+        });
+
+        document.getElementById('events-link').addEventListener('click', function () {
+            window.location.href = 'events.html';
+        });
+    </script>
+</body>
+
+</html>

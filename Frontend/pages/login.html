@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/login.css') }}">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login to ILL College LMS</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span class="password-toggle" onclick="togglePasswordVisibility()">🔒</span>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a>.</p>
+    </div>
+
+    <script src="{{ url_for('static', path='js/LoginHandler.js') }}"></script>
+
+</body>
+</html>

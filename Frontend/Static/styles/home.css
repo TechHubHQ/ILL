@@ -1,0 +1,112 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #000; 
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        h2, h3 {
+            color: #e50914;
+        }
+
+        h3 {
+            border-bottom: 2px solid #e50914;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #fff; /* Text color set to white */
+        }
+
+        a {
+            color: #faf4f4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #b2070e;
+        }
+
+        blockquote {
+            border-left: 3px solid #e50914;
+            padding-left: 20px;
+            margin: 0;
+            color: #fff;
+        }
+
+        blockquote p {
+            font-style: italic;
+        }
+
+        blockquote cite {
+            color: #e50914;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+        }
+        iframe {
+            width: 100%; 
+            height: 10vh; 
+            border: none; 
+        }

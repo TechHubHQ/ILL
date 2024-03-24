@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | ILL College LMS</title>
+    <link rel="icon" type="image/x-icon" href="../../../public/images/ico-logo.ico">
+    <link rel="stylesheet" href="../Static/styles/support.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Support | ILL College LMS</h1>
+        <a href="index.html"><button class="netflix-button">Main Page</button></a>
+    </header>
+
+    <section>
+        <h2>Contact Support</h2>
+        <p>If you have any questions or issues, feel free to reach out to our support team by filling out the form below:</p>
+
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <button id="live-chat-btn">Live Chat</button>
+    </footer>
+
+  <!-- Live chat pop-up -->
+<div id="live-chat-popup">
+    <div id="live-chat-content">
+        <div id="chat-header">
+            <h3>Live Chat</h3>
+            <button id="close-chat-btn">Close</button>
+        </div>
+        <div id="chat-messages">
+            <!-- Example message with avatar -->
+            <div class="chat-message">
+                <img src="../../../public/images/chatbot.jpg" alt="Avatar" class="avatar">
+                <div class="message">iLL-Bot!</div>
+            </div>
+        </div>
+        <div id="user-input">
+            <input type="text" id="user-message" placeholder="Type your message here...">
+            <button id="send-message-btn">Send</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../Static/js/support.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Updates - College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/library_updates.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Library Updates</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>
+
+    <section class="container" id="main-content">
+        <div class="library-content">
+            <h2>Stay Informed with Library Updates</h2>
+            <p>Explore the latest additions, events, and news from the college library.</p>
+
+            <div class="update-items">
+                <div class="update-item">
+                    <h3>New Books Arrived!</h3>
+                    <p>Discover our latest book additions covering various genres.</p>
+                    <button onclick="exploreUpdate('new_books')">Explore</button>
+                </div>
+
+                <div class="update-item">
+                    <h3>Library Events</h3>
+                    <p>Participate in upcoming library events and activities.</p>
+                    <button onclick="exploreUpdate('library_events')">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 College LMS</p>
+        <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+
+        function exploreUpdate(updateType) {
+            alert('Explore ' + updateType);
+        }
+    </script>
+</body>
+
+</html>

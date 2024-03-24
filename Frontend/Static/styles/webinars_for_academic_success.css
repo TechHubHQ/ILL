@@ -1,0 +1,164 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #141414;
+    color: #fff;
+}
+
+header {
+    background-color: #e50914;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #e50914;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    height: auto;
+    display: flex;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #b20710;
+}
+
+.webinars-content {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    min-height: 50vh;
+    background-color: rgba(4, 4, 4, 0.545);
+    border-radius: 10px;
+    overflow: hidden;
+    color: whitesmoke;
+    margin-right: 20px;
+}
+
+.webinars-content h2 {
+    margin-bottom: 20px;
+}
+
+.webinar-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.webinar {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.webinar h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.webinar p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.webinar button {
+    background-color: #ef0c17;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 8px 15px;
+    border: none;
+}
+
+.webinar button:hover {
+    background-color: #b20710;
+}
+
+footer {
+    background-color: #020000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-top: 10px;
+    height: auto;
+}
+
+.support {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.click-here {
+    margin-left: 10px;
+    color: #e50914;
+    text-decoration: none;
+}
+
+.click-here:hover {
+    color: #3c0606;
+}

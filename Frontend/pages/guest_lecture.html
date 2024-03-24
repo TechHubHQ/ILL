@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Lecture - College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/guest_lecture.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Guest Lecture</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>
+    
+    <section class="container" id="main-content">
+        <div class="lecture-content">
+            <h2>Attend Exciting Guest Lectures</h2>
+            <p>Explore insightful talks by distinguished speakers and experts in various fields.</p>
+
+            <div class="lecture-items">
+                <div class="lecture-item">
+                    <h3>Data Science Trends</h3>
+                    <p>Join us for a guest lecture on the latest trends in data science.</p>
+                    <p><strong>Speaker:</strong> Dr. John Smith</p>
+                    <p><strong>Date:</strong> March 10, 2024</p>
+                    <p><strong>Time:</strong> 5:00 PM - 6:30 PM</p>
+                    <button onclick="attendLecture('data_science')">Attend</button>
+                </div>
+
+                <div class="lecture-item">
+                    <h3>Entrepreneurship Insights</h3>
+                    <p>Learn about entrepreneurship from a successful entrepreneur.</p>
+                    <p><strong>Speaker:</strong> Ms. Jane Doe</p>
+                    <p><strong>Date:</strong> April 5, 2024</p>
+                    <p><strong>Time:</strong> 3:30 PM - 5:00 PM</p>
+                    <button onclick="attendLecture('entrepreneurship')">Attend</button>
+                </div>
+
+                <!-- Add more lecture items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 College LMS</p>
+        <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+
+        function attendLecture(lectureType) {
+            // Add logic to handle attendance of specific lecture type
+            alert('Attend ' + lectureType + ' lecture');
+        }
+    </script>
+</body>
+
+</html>

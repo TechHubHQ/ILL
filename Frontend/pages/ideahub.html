@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaHud - Students Share Their Thoughts</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/ideahub.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>IdeaHud - Share Your Thoughts</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>
+
+    <section class="container" id="main-content">
+        <div class="ideahud-content">
+            <h2>Welcome to IdeaHud - Share Your Thoughts!</h2>
+            <p>Express your ideas and thoughts to foster creativity and collaboration among students.</p>
+
+            <div class="idea-form">
+                <label for="idea">Your Idea:</label>
+                <textarea id="idea" name="idea" rows="4" placeholder="Share your thoughts..."></textarea>
+                <button onclick="submitIdea()">Submit Idea</button>
+            </div>
+
+            <div class="idea-feed">
+                <!-- Display submitted ideas here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 College LMS</p>
+        <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+
+        function submitIdea() {
+            var ideaText = document.getElementById('idea').value;
+            if (ideaText.trim() !== '') {
+                var ideaItem = document.createElement('div');
+                ideaItem.className = 'idea-item';
+                ideaItem.textContent = 'Idea: ' + ideaText;
+                document.querySelector('.idea-feed').appendChild(ideaItem);
+                document.getElementById('idea').value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

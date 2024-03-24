@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | College LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/home.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="{{ url_for('home') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
+                Home
+            </a>
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
+                Courses
+            </a>
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
+                Assignments
+            </a>
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
+                Profile
+            </a>
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
+                Events
+            </a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2>Welcome to College LMS</h2>
+        <p>
+            Explore a world of knowledge with our Learning Management System (LMS).
+            Connect with your courses, track your progress, and stay engaged with
+            exciting events. Choose your path to success!
+        </p>
+
+        <h3>Featured Courses</h3>
+        <ul>
+            <li><a href="{{ url_for('courses') }}" target="_blank">Introduction to Computer Science</a></li>
+            <li><a href="{{ url_for('courses') }}" target="_blank">Modern Literature: A Literary Journey</a></li>
+            <li><a href="{{ url_for('courses') }}" target="_blank">Mathematics for Problem Solvers</a></li>
+        </ul>
+
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li><a href="{{ url_for('events') }}" target="_blank">Web Development Workshop - January 28</a></li>
+            <li><a href="{{ url_for('events') }}" target="_blank">Guest Lecture: Artificial Intelligence - February 5</a></li>
+            <li><a href="{{ url_for('events') }}" target="_blank">Career Fair - February 15</a></li>
+        </ul>
+    </section>
+
+    <section class="container">
+        <h3>Student Testimonials</h3>
+        <div>
+            <blockquote>
+                <p>"College LMS has transformed my learning experience. The interactive courses
+                and supportive community have helped me excel in my studies."</p>
+                <cite>- Emily Johnson, Computer Science Major</cite>
+            </blockquote>
+            <blockquote>
+                <p>"The LMS makes it easy to access course materials, submit assignments,
+                and collaborate with professors. It's a game-changer for modern education."</p>
+                <cite>- Alex Rodriguez, Business Administration</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 College LMS</p>
+    </footer>
+
+</body>
+</html>

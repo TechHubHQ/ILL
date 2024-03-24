@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal |iLL Online LMS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/admin.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1 class="logo">@ILL-Admin Portal</h1>
+        <ul class="nav-menu">
+            <li><a href="#" id="dashboard-link">Dashboard</a></li>
+            <li><a href="#" id="courses-link">Courses</a></li>
+            <li><a href="#" id="students-link">Students</a></li>
+            <li><a href="#" id="instructors-link">Instructors</a></li>
+            <li><a href="#" id="settings-link">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Activities</h2>
+        <ul class="sidebar-menu">
+            <li><a href="#" id="create-course-link">Create Course</a></li>
+            <li><a href="#" id="manage-courses-link">Manage Courses</a></li>
+            <li><a href="#" id="add-student-link">Add Student</a></li>
+            <li><a href="#" id="manage-students-link">Manage Students</a></li>
+            <li><a href="#" id="add-instructor-link">Add Instructor</a></li>
+            <li><a href="#" id="manage-instructors-link">Manage Instructors</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2>Welcome to the Admin Portal</h2>
+        <!-- Main content will be displayed here -->
+    </main>
+    <script src="{{ url_for('static', path='js/admin.js') }}"></script>
+</body>
+</html>
