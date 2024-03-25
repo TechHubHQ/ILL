@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player | College LMS</title>
-    <link rel="stylesheet" href="../Static/styles/videoplayer.css">
-    <link rel="icon" type="image/x-icon" href="../../../public/images/ico-logo.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/videoplayer.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
 </head>
 <body>
 
@@ -20,46 +20,8 @@
     <footer>
         <p>&copy; 2024 College LMS</p>
     </footer>
-
-    <script>
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-
-        // Get the YouTube link from the query parameter
-        const youtubeLink = getParameterByName('youtubeLink');
-
-        // Extract the video ID from the YouTube link
-        function extractVideoId(link) {
-            const url = new URL(link);
-            const searchParams = new URLSearchParams(url.search);
-            return searchParams.get('v');
-        }
-
-        // Display the video player or handle the link as needed
-        if (youtubeLink) {
-            const videoId = extractVideoId(youtubeLink);
-            if (videoId) {
-                // Set the src attribute of the iframe
-                document.getElementById('youtubePlayer').src = `https://www.youtube.com/embed/${videoId}`;
-            } else {
-                console.error('Invalid YouTube link.');
-            }
-        } else {
-            console.error('No YouTube link provided.');
-        }
-        function playNextVideo() {
-            // Add logic to play the next video
-            alert('Next video functionality will be implemented here.');
-        }
-    </script>
-
+    
+    <script src="{{ url_for('static', filename='js/videoplayer.js') }}"></script>
     <!-- Include the YouTube IFrame API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
 

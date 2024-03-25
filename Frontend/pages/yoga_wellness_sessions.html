@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoga and Wellness Sessions - College LMS</title>
-    <link rel="icon" type="image/x-icon" href="../../../public/images/ico-logo.ico">
-    <link rel="stylesheet" href="../Static/styles/yoga_wellness_sessions.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/yoga_wellness_sessions.css') }}">
 </head>
 
 <body>
@@ -18,24 +18,24 @@
 
     <nav>
         <div class="logo-container">
-            <a href="home.html" target="_parent">
-                <img class="logo" src="../../../public/images/home.png" alt="Home">
+            <a href="{{ url_for('index') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
                 Home
             </a>
-            <a href="courses.html" target="_parent">
-                <img class="logo" src="../../../public/images/meeting.png" alt="Courses">
+            <a href="{{ url_for('courses') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', filename='images/meeting.png') }}" alt="Courses">
                 Courses
             </a>
-            <a href="assignments.html" target="_parent">
-                <img class="logo" src="../../../public/images/homework.png" alt="Assignments">
+            <a href="{{ url_for('assignments') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', filename='images/homework.png') }}" alt="Assignments">
                 Assignments
             </a>
-            <a href="profile.html" target="_parent">
-                <img class="logo" src="../../../public/images/profile.png" alt="Profile">
+            <a href="{{ url_for('profile') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile">
                 Profile
             </a>
-            <a href="events.html" target="_parent">
-                <img class="logo" src="../../../public/images/calendar.png" alt="Events">
+            <a href="{{ url_for('events') }}" target="_parent">
+                <img class="logo" src="{{ url_for('static', filename='images/calendar.png') }}" alt="Events">
                 Events
             </a>
         </div>
@@ -68,19 +68,7 @@
 
     <footer>
         <p>&copy; 2024 College LMS</p>
-        <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
+        <p class="support">College LMS Support - <a href="{{ url_for('support') }}">Click Here</a></p>
     </footer>
-
-    <script>
-        function logout() {
-            window.location.href = 'login.html';
-        }
-
-        function register(session) {
-            
-            alert('Registered for ' + session);
-        }
-    </script>
 </body>
-
 </html>

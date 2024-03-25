@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Registration | ILL College LMS</title>
-    <link rel="icon" type="image/x-icon" href="../../../public/images/ico-logo.ico">
-    <link rel="stylesheet" href="../Static/styles/sportsform.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sportsform.css') }}">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <h1>Sports Registration | ILL College LMS</h1>
     </header>
 
-    <form>
+    <form action="{{ url_for('register') }}" method="POST">
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required>
 
