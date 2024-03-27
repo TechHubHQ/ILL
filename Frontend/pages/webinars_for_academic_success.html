@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Webinars for Academic Success - College LMS</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/webinars_for_academic_success.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/webinars_for_academic_success.css') }}">
 </head>
 
 <body>
@@ -19,23 +19,23 @@
     <nav>
         <div class="logo-container">
             <a href="{{ url_for('index') }}" target="_parent">
-                <img class="logo" src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+                <img class="logo" src="{{ url_for('static', path='images/home.png') }}" alt="Home">
                 Home
             </a>
             <a href="{{ url_for('courses') }}" target="_parent">
-                <img class="logo" src="{{ url_for('static', filename='images/meeting.png') }}" alt="Courses">
+                <img class="logo" src="{{ url_for('static', path='images/meeting.png') }}" alt="Courses">
                 Courses
             </a>
             <a href="{{ url_for('assignments') }}" target="_parent">
-                <img class="logo" src="{{ url_for('static', filename='images/homework.png') }}" alt="Assignments">
+                <img class="logo" src="{{ url_for('static', path='images/homework.png') }}" alt="Assignments">
                 Assignments
             </a>
             <a href="{{ url_for('profile') }}" target="_parent">
-                <img class="logo" src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile">
+                <img class="logo" src="{{ url_for('static', path='images/profile.png') }}" alt="Profile">
                 Profile
             </a>
             <a href="{{ url_for('events') }}" target="_parent">
-                <img class="logo" src="{{ url_for('static', filename='images/calendar.png') }}" alt="Events">
+                <img class="logo" src="{{ url_for('static', path='images/calendar.png') }}" alt="Events">
                 Events
             </a>
         </div>

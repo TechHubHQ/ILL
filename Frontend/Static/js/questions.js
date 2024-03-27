@@ -1,7 +1,7 @@
 let currentQuestion = 0;
 let score = 0;
 
-fetch('../json/questions.json')
+fetch('../../../Frontend/Static/json/questions.json')
   .then(response => response.json())
   .then(data => {
 
@@ -59,7 +59,7 @@ fetch('../json/questions.json')
 
     document.getElementById('finish').addEventListener('click', () => {
       // Redirect to assignments.html
-      window.location.href = 'assignments.html';
+      window.location.href = '/assignments';
     });
 
   });

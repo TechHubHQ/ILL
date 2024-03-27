@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/quiz.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='styles/quiz.css') }}">
   <title>Quiz</title>
 </head>
 <body class="quiz-body">
@@ -17,6 +18,6 @@
     <button id="finish">Finish</button>
   </div>
 </div>
-<script src="{{ url_for('static', filename='js/questions.js') }}"></script>
+<script src="{{ url_for('static', path='js/questions.js') }}"></script>
 </body>
 </html>

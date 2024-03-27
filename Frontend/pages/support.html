@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support | ILL College LMS</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/support.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/support.css') }}">
 </head>
 <body>
 
@@ -46,7 +46,7 @@
             <div id="chat-messages">
                 <!-- Example message with avatar -->
                 <div class="chat-message">
-                    <img src="{{ url_for('static', filename='images/chatbot.jpg') }}" alt="Avatar" class="avatar">
+                    <img src="{{ url_for('static', path='images/chatbot.jpg') }}" alt="Avatar" class="avatar">
                     <div class="message">iLL-Bot!</div>
                 </div>
             </div>
@@ -57,6 +57,6 @@
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/support.js') }}"></script>
+    <script src="{{ url_for('static', path='js/support.js') }}"></script>
 </body>
 </html>

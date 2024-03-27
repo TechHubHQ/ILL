@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player | College LMS</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/videoplayer.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/videoplayer.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='images/ico-logo.ico') }}">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
         <p>&copy; 2024 College LMS</p>
     </footer>
     
-    <script src="{{ url_for('static', filename='js/videoplayer.js') }}"></script>
+    <script src="{{ url_for('static', path='js/videoplayer.js') }}"></script>
     <!-- Include the YouTube IFrame API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
