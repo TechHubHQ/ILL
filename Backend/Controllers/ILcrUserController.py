@@ -2,6 +2,7 @@ import os
 import sys
 import logging
 import hashlib
+
 root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(root_dir)
 from Backend.Connections.ILconDBConnector import connect_to_db
@@ -90,10 +91,10 @@ def register_user(username, email, phone, role, password, confirm_password):
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         cursor = db_con.cursor()
         query = """
-            INSERT INTO ill_users (username, email, phone, role, password)
+            INSERT INTO ill_users (username, email, password, role, phone)
             VALUES (?, ?, ?, ?, ?)
         """
-        cursor.execute(query, (username, email, phone, role, hashed_password))
+        cursor.execute(query, (username, email, hashed_password, role, phone))
         db_con.commit()
         logging.info(f"User {username} registered successfully")
         return {"message": "Registration successful"}
@@ -115,7 +116,7 @@ def login_user(email, password):
         user = cursor.fetchone()
         if user:
             user_id = user[1]
-            return {"message": "Login successful",  "user_id": user_id}
+            return {"message": "Login successful", "user_id": user_id}
         else:
             return {"message": "Invalid email or password"}
     except Exception as e:
