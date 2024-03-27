@@ -1,24 +1,42 @@
-from fastapi import FastAPI, Request
+from datetime import datetime, timedelta
+from fastapi import FastAPI, Request, APIRouter
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 from starlette.responses import RedirectResponse
-from Backend.Connections.ILconDBConnector import connect_to_db
 from Config.ILcConfig import Config
+from Backend.Connections.ILconDBConnector import connect_to_db, create_tables
 from Backend.Controllers.ILcrUserController import register_user, login_user
 
 app = FastAPI()
+router = APIRouter()
 app.mount("/Frontend/Static", StaticFiles(directory="Frontend/Static"), name="static")
+app.include_router(router, prefix="/api")
 
 app.add_middleware(SessionMiddleware, secret_key=Config.SECRET_KEY)
 templates = Jinja2Templates(directory="Frontend/pages")
 db_con = connect_to_db()
 
+if db_con:
+    create_tables()
+
 
 # Session Handler
 def is_logged_in(request: Request):
+    check_session(request)
     return "user_id" in request.session
+
+
+def check_session(request: Request):
+    if "user_id" in request.session:
+        expires_at_str = request.session.get("expires_at")
+        if expires_at_str:
+            expires_at = datetime.fromisoformat(expires_at_str)
+            if datetime.now() > expires_at:
+                del request.session["user_id"]
+                return RedirectResponse("/", status_code=302)
+    return None
 
 
 # Page Route Handlers
@@ -80,6 +98,7 @@ async def quiz(request: Request):
 @app.post("/api/register")
 async def handle_signup(request: Request):
     form_data = await request.form()
+    print(form_data)
     username = form_data["full-name"]
     email = form_data["email"]
     phone = form_data["phone"]
@@ -98,6 +117,8 @@ async def handle_login(request: Request):
     result = login_user(email=email, password=password)
     if result["message"] == "Login successful":
         request.session["user_id"] = result["user_id"]
+        print(request.session["user_id"])
+        request.session["expires_at"] = (datetime.now() + timedelta(hours=12)).isoformat()
     return result
 
 
