@@ -43,7 +43,7 @@ def check_session(request: Request):
 @app.get("/", response_class=HTMLResponse)
 async def login(request: Request):
     if is_logged_in(request):
-        return RedirectResponse("/home", status_code=302)
+        return RedirectResponse("/landing", status_code=302)
     return templates.TemplateResponse("login.html", {"request": request})
 
 
@@ -57,6 +57,13 @@ async def home(request: Request):
     if not is_logged_in(request):
         return RedirectResponse("/", status_code=302)
     return templates.TemplateResponse("home.html", {"request": request})
+
+
+@app.get("/landing", response_class=HTMLResponse)
+async def landing(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("landing.html", {"request": request})
 
 
 @app.get("/courses", response_class=HTMLResponse)
