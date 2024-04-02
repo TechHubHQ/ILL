@@ -105,7 +105,7 @@ async def quiz(request: Request):
 async def holiday(request: Request):
     if not is_logged_in(request):
         return RedirectResponse("/", status_code=302)
-    return templates.TemplateResponse("holiday.html", {"request": request})
+    return templates.TemplateResponse("holidays.html", {"request": request})
 
 
 @app.get("/timetable", response_class=HTMLResponse)
