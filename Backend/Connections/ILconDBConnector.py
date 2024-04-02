@@ -28,17 +28,34 @@ def create_tables():
     """
     Creates the tables in the database using the schema.sql file.
     """
-    global db_conn  # Declare the global variable
+    global db_conn
 
     if db_conn is None:
-        db_conn = connect_to_db()
+        db_conn = sqlite3.connect(DB_PATH)
 
     if db_conn:
         try:
             with open(SCHEMA_PATH, 'r') as schema_file:
                 schema_sql = schema_file.read()
-            db_conn.executescript(schema_sql)
-            print("Tables created successfully.")
+
+            cursor = db_conn.cursor()
+
+            # Check if tables already exist
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+            tables = cursor.fetchall()
+            existing_tables = [table[0] for table in tables]
+
+            # Check if tables from schema exist in the database
+            new_tables = [line.split()[2] for line in schema_sql.splitlines() if line.startswith("CREATE TABLE")]
+            tables_to_create = [table for table in new_tables if table not in existing_tables]
+
+            if tables_to_create:
+                # Tables don't exist, create them
+                db_conn.executescript(schema_sql)
+                print("Tables created successfully.")
+            else:
+                print("Tables already exist.")
+
         except sqlite3.Error as e:
             print(f"Error creating tables: {e}")
     else:
