@@ -28,7 +28,7 @@ function createCourseCard(course) {
 }
 
 // Fetch course data from the JSON file
-fetch('course.json')
+fetch('../../../Frontend/Static/json/course.json')
     .then(response => response.json())
     .then(courseData => {
         // Render course cards
@@ -85,7 +85,7 @@ enrollButton.addEventListener('click', openPaymentPage);
 
 // Function to open the payment page
 function openPaymentPage() {
-    const paymentPageUrl = 'payment.html';
+    const paymentPageUrl = '../../../pages/paymentpage.html';
     const paymentPageParams = `?totalPrice=${totalPrice.toFixed(2)}`;
     const paymentPageFullUrl = paymentPageUrl + paymentPageParams;
 
