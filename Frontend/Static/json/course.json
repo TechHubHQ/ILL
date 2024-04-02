@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Computer Science",
+        "price": "₹3599"
+    },
+    {
+        "title": "Mathematics",
+        "price": "₹2999"
+    },
+    {
+        "title": "Physics",
+        "price": "₹3349"
+    },
+    {
+        "title": "Photography",
+        "price": "₹2249"
+    },
+    {
+        "title": "Cybersecurity",
+        "price": "₹3849"
+    },
+    {
+        "title": "Artificial Intelligence",
+        "price": "₹4199"
+    },
+    {
+        "title": "Graphic Designing",
+        "price": "₹2699"
+    },
+    {
+        "title": "Music Appreciation and Theory",
+        "price": "₹1899"
+    },
+    {
+        "title": "Introduction to Data Science",
+        "price": "₹3599"
+    },
+    {
+        "title": "Health and Wellness",
+        "price": "₹1399"
+    },
+    {
+        "title": "Digital Photography and Editing",
+        "price": "₹2999"
+    },
+    {
+        "title": "Foreign Language Learning (e.g., Spanish, French)",
+        "price": "₹2249"
+    },
+    {
+        "title": "Environmental Science",
+        "price": "₹2699"
+    },
+    {
+        "title": "Business English",
+        "price": "₹3349"
+    },
+    {
+        "title": "Digital Marketing",
+        "price": "₹3849"
+    },
+    {
+        "title": "Introduction to Finance",
+        "price": "₹3599"
+    },
+    {
+        "title": "Engineering Ethics",
+        "price": "₹2999"
+    },
+    {
+        "title": "Network Fundamentals and Protocols",
+        "price": "₹4199"
+    }
+]

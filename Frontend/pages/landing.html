@@ -41,67 +41,76 @@
         </div>
     </nav>
     
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILL Announcements!</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/landing.css') }}">
+</head>
+<body>
     <section class="container" id="main-content">
         <div class="ill-content">
             <h2>ILL Announcements!</h2>        
             <div class="announcement-row">
                 <div class="announcement">
                     <p>Holiday List</p>
-                    <button type="submit"><a href="./holidays.html">Get Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./holidays.html') }}">Get Now!</a></button>
                 </div>
     
                 <div class="announcement">
                     <p>Semester Time-Table</p>
-                    <button type="submit"><a href="./timetable.html">Get Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./timetable.html') }}">Get Now!</a></button>
                 </div>
     
                 <div class="announcement">
                     <p>Sports Registration</p>
-                    <button type="submit"><a href="./sportsform.html">Register Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./sportsform.html') }}">Register Now!</a></button>
                 </div>
             </div>
     
             <div class="announcement-row">
                 <div class="announcement">
                     <p>Fee Payment</p>
-                    <button type="submit"><a href="./paymain.html">Pay Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./paymain.html') }}">Pay Now!</a></button>
                 </div>
     
                 <div class="announcement">
                     <p>Library Updates</p>
-                    <button type="submit"><a href="./library_updates.html">Check Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./library_updates.html') }}">Check Now!</a></button>
                 </div>
     
                 <div class="announcement">
                     <p>Guest Lecture</p>
-                    <button type="submit"><a href="./guest_lecture.html">Details Here!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./guest_lecture.html') }}">Details Here!</a></button>
                 </div>
             </div>
     
             <div class="announcement-row">
                 <div class="announcement">
                     <p>Idea Hub</p>
-                    <button type="submit"><a href="./ideahud.html">Share Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./ideahud.html') }}">Share Now!</a></button>
                 </div>
 
                 <div class="announcement">
                     <p>Yoga and Wellness Sessions for Students</p>
-                    <button type="submit"><a href="./yoga_wellness_sessions.html">Join Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./yoga_wellness_sessions.html') }}">Join Now!</a></button>
                 </div>
 
                 <div class="announcement">
                     <p>Interactive Webinars for Academic Success</p>
-                    <button type="submit"><a href="./webinars_for_academic_success.html">Join Now!</a></button>
+                    <button type="submit"><a href="{{ url_for('static', path='./webinars_for_academic_success.html') }}">Join Now!</a></button>
                 </div>
+            </div>
         </div>
-        
-       
     </section>
 
     <footer>
         <p>&copy; 2024 ILL College LMS</p>
-        <p class="support">iLL integrated Support - <a href="support.html">Click Here</a></p>
+        <p class="support">iLL integrated Support - <a href="{{ url_for('static', path='./support.html') }}">Click Here</a></p>
     </footer>
+
 </body>
 
 </html>

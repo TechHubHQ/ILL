@@ -75,16 +75,8 @@
         <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
     </footer>
 
-    <script>
-        function logout() {
-            window.location.href = 'login.html';
-        }
-
-        function attendLecture(lectureType) {
-            // Add logic to handle attendance of specific lecture type
-            alert('Attend ' + lectureType + ' lecture');
-        }
-    </script>
+   
+    <script src="{{ url_for('static', path='js/guest_lecture.js') }}"></script>
 </body>
 
 </html>

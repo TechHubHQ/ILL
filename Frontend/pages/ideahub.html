@@ -59,26 +59,11 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 College LMS</p>
-        <p class="support">College LMS Support - <a href="support.html">Click Here</a></p>
+        <p>&copy; 2024 ILL College LMS</p>
+        <p class="support">iLL integrated Support - <a href="{{ url_for('static', path='./support.html') }}">Click Here</a></p>
     </footer>
 
-    <script>
-        function logout() {
-            window.location.href = 'login.html';
-        }
-
-        function submitIdea() {
-            var ideaText = document.getElementById('idea').value;
-            if (ideaText.trim() !== '') {
-                var ideaItem = document.createElement('div');
-                ideaItem.className = 'idea-item';
-                ideaItem.textContent = 'Idea: ' + ideaText;
-                document.querySelector('.idea-feed').appendChild(ideaItem);
-                document.getElementById('idea').value = '';
-            }
-        }
-    </script>
+    <script src="{{ url_for('static', path='js/ideahub.js') }}"></script>
 </body>
 
 </html>

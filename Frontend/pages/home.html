@@ -58,17 +58,8 @@
 
     <section class="container">
         <h3>Student Testimonials</h3>
-        <div>
-            <blockquote>
-                <p>"College LMS has transformed my learning experience. The interactive courses
-                and supportive community have helped me excel in my studies."</p>
-                <cite>- Emily Johnson, Computer Science Major</cite>
-            </blockquote>
-            <blockquote>
-                <p>"The LMS makes it easy to access course materials, submit assignments,
-                and collaborate with professors. It's a game-changer for modern education."</p>
-                <cite>- Alex Rodriguez, Business Administration</cite>
-            </blockquote>
+        <div id="student-testimonials">
+            <!-- JavaScript will insert student testimonials here -->
         </div>
     </section>
 
@@ -76,5 +67,6 @@
         <p>&copy; 2024 College LMS</p>
     </footer>
 
+    <script src="{{ url_for('static', path='js/quote.js') }}"></script>
 </body>
 </html>

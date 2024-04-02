@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414; /* Dark background color */
+    color: #e5e5e5; /* Light text color */
+}
+
+.enroll-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #e50914; /* Netflix red */
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.cta-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #e50914; /* Netflix red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b81d24; /* Darker shade of Netflix red */
+}
+
+/* Course card styles */
+.course-card {
+    background-color: #222222; /* Dark card background color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Slightly move the card up on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Increase the box-shadow on hover */
+}
+
+.course-card h2 {
+    margin-bottom: 10px;
+    color: #e50914; /* Netflix red */
+}
+
+.course-card p {
+    margin: 0;
+    color: #e5e5e5; /* Light text color */
+}
+@keyframes checkbox-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Checkbox styles */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e50914;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease; /* Add transition for smooth animation */
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #e50914;
+    animation: checkbox-pulse 0.3s; /* Apply the checkbox-pulse animation */
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: "\2713";
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+}

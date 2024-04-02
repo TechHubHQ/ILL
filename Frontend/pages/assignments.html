@@ -40,10 +40,6 @@
             <li id="assignment1">Assignment 1: Due <button id="takeQuizBtn">Take Quiz</button></li>
         </ul>
     </section>
-    <script>
-        document.getElementById('takeQuizBtn').addEventListener('click', () => {
-            location.href = '/quiz'; 
-        });
-    </script>
+    <script src="{{ url_for('static', path='js/assignments.js') }}"></script>
 </body>
 </html>

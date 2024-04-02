@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Courses | ILL</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path ='images/ico-logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/course-registration.css') }}">
+</head>
+
+<body>
+
+    <div class="enroll-container">
+        <header>
+            <h1>Enroll in Courses</h1>
+        </header>
+
+        <div class="courses-container">
+            <!-- Course cards will be rendered here -->
+        </div>
+
+        <p id="total-price" class="total-price">Total Price: ₹0.00</p>
+
+        <button class="cta-button">Enroll</button>
+    </div>
+
+    <script src="{{ url_for('static', path='js/course.js') }}"></script>
+</body>
+
+</html>
