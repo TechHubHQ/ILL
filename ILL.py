@@ -101,6 +101,76 @@ async def quiz(request: Request):
     return templates.TemplateResponse("quiz.html", {"request": request})
 
 
+@app.get("/holiday",  response_class=HTMLResponse)
+async def holiday(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("holiday.html", {"request": request})
+
+
+@app.get("/timetable", response_class=HTMLResponse)
+async def timetable(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("timetable.html", {"request": request})
+
+
+@app.get("/sportsform",  response_class=HTMLResponse)
+async def sportsform(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("sportsform.html", {"request": request})
+
+
+@app.get("/paymain",  response_class=HTMLResponse)
+async def paymain(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("paymain.html", {"request": request})
+
+
+@app.get("/library_updates", response_class=HTMLResponse)
+async def library_updates(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("library_updates.html", {"request": request})
+
+
+@app.get("/guest_lecture", response_class=HTMLResponse)
+async def guest_lecture(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("guest_lecture.html", {"request": request})
+
+
+@app.get("/ideahub", response_class=HTMLResponse)
+async def ideahub(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("ideahub.html", {"request": request})
+
+
+@app.get("/yoga_wellness_sessions", response_class=HTMLResponse)
+async def yoga_wellness_sessions(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("yoga_wellness_sessions.html", {"request": request})
+
+
+@app.get("/webinars_for_academic_success", response_class=HTMLResponse)
+async def webinars_for_academic_success(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("webinars_for_academic_success.html", {"request": request})
+
+
+@app.get("/support",  response_class=HTMLResponse)
+async def support(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("support.html", {"request": request})
+
+
 # API call Handlers
 @app.post("/api/register")
 async def handle_signup(request: Request):
