@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(data.message);
 
             if (data.message === 'Login successful') {
-                window.location.href = '/home';
+                window.location.href = '/landing';
             }
         });
     }
