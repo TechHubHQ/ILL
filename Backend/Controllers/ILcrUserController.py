@@ -122,3 +122,71 @@ def login_user(email, password):
     except Exception as e:
         logging.error(f"Error logging in user {email}: {str(e)}")
         return {"message": f"Error: {str(e)}"}
+
+
+def register_sport(std_name, std_department, sport, gender):
+    logging.info(f"*** Initiating Sports Registration for {std_name} ***")
+    try:
+        cursor = db_con.cursor()
+        query = """
+            INSERT INTO sports_details (std_name, std_department, sport, gender)
+            VALUES (?, ?, ?, ?)
+        """
+        cursor.execute(query, (std_name, std_department, sport, gender))
+        db_con.commit()
+        logging.info(f"Sports Registration successful for {std_name} for sport {sport}")
+        return {"message": "Sports Registration Successful"}
+    except Exception as exc:
+        logging.error(f"Exception while registering {std_name} see below\n{exc}")
+        return 0
+
+
+def get_sports(username):
+    logging.info(f"Fetching Sports details for user {username}")
+    try:
+        cursor = db_con.cursor()
+        query = """
+            SELECT * FROM sports_details
+            WHERE std_name = ?
+        """
+        cursor.execute(query, (username,))
+        sports = cursor.fetchall()
+        logging.info(f"Fetched User sports details {sports}")
+        return sports
+    except Exception as exc:
+        logging.error(f"Exception while fetching sports for {username} \n{exc}")
+        return 0
+
+
+def save_idea(username, idea, submitted_on):
+    logging.info(f"*** Initiating save_idea for {username} ***")
+    try:
+        cursor = db_con.cursor()
+        query = """
+            INSERT INTO idea_details (username, idea, submitted_on)
+            VALUES (?, ?, ?)
+        """
+        cursor.execute(query, (username, idea, submitted_on))
+        db_con.commit()
+        logging.info(f"Idea Saved Successfully")
+        return {"message": "Idea Submitted Successfully"}
+    except Exception as exc:
+        logging.error(f"Exception while saving idea {username} -- {idea} see below\n{exc}")
+        return 0
+
+
+def get_ideas(username):
+    logging.info(f"Getting User saved ideas for {username}")
+    try:
+        cursor = db_con.cursor()
+        query = """
+            SELECT idea, submitted_on FROM idea_details
+            WHERE username = ?
+        """
+        cursor.execute(query, (username,))
+        ideas = cursor.fetchall()
+        logging.info(f"Fetched User saved Ideas\n{ideas}")
+        return ideas
+    except Exception as exc:
+        logging.error(f"Exception while getting ideas {username} see below\n{exc}")
+        return {}

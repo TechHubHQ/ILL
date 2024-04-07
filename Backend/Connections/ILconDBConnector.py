@@ -45,9 +45,12 @@ def create_tables():
             tables = cursor.fetchall()
             existing_tables = [table[0] for table in tables]
 
-            # Check if tables from schema exist in the database
-            new_tables = [line.split()[2] for line in schema_sql.splitlines() if line.startswith("CREATE TABLE")]
-            tables_to_create = [table for table in new_tables if table not in existing_tables]
+            # Extract the table names from the schema SQL
+            table_names = [line.split()[2] for line in schema_sql.splitlines()
+                           if line.strip().startswith("CREATE TABLE")]
+
+            # Check which tables from the schema SQL are not in the existing tables
+            tables_to_create = [table for table in table_names if table not in existing_tables]
 
             if tables_to_create:
                 # Tables don't exist, create them
