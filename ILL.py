@@ -197,6 +197,13 @@ async def support(request: Request):
     return templates.TemplateResponse("support.html", {"request": request})
 
 
+@app.get("/logout", response_class=HTMLResponse)
+async def logout(request: Request):
+    del request.session["user_id"]
+    del request.session["expires_at"]
+    return RedirectResponse("/", status_code=302)
+
+
 # API call Handlers
 @app.post("/api/register")
 async def handle_signup(request: Request):

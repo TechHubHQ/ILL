@@ -30,7 +30,7 @@ function showSuccessOverlay() {
     
     setTimeout(() => {
         overlay.classList.remove('show');
-        window.location.href = '/course_registration';
+        window.location.href = '/landing';
     }, 3000);
 }
 
