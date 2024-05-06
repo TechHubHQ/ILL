@@ -40,11 +40,13 @@ async function renderCourses() {
     coursesContainer.innerHTML = courseCardsHTML;
 }
 
-// Function to redirect to YouTube video player page
+/// Function to redirect to the /videoplayer route with YouTube link as parameter
 function redirectToYouTube(youtubeLink) {
-    // Open the video player page with the YouTube link
-    window.open(`videoplayer.html?youtubeLink=${encodeURIComponent(youtubeLink)}`, '_blank');
+    // Construct the URL with parameters
+    const url = `/videoplayer?youtubeLink=${encodeURIComponent(youtubeLink)}`;
+    window.location.href = url;
 }
+
 
 // Call renderCourses when the page loads
 window.addEventListener('load', renderCourses);

@@ -11,14 +11,14 @@
 
     <header>
         <h1>Support | ILL College LMS</h1>
-        <a href="{{ url_for('index') }}"><button class="netflix-button">Main Page</button></a>
+        <a href="{{ url_for('landing') }}"><button class="netflix-button">Main Page</button></a>
     </header>
 
     <section>
         <h2>Contact Support</h2>
         <p>If you have any questions or issues, feel free to reach out to our support team by filling out the form below:</p>
 
-        <form action="{{ url_for('submit_message') }}" method="POST">
+        <form>
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 

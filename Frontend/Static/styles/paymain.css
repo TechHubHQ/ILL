@@ -46,7 +46,7 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('../../../../public/images/pay.jpg');
+    background-image: url('../../Static/images/pay.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);

@@ -1,3 +1,8 @@
+
+# ==================================================================
+# Imports/Packages
+# ==================================================================
+
 from datetime import datetime, timedelta
 from fastapi import FastAPI, Request, APIRouter
 from fastapi.responses import HTMLResponse
@@ -74,6 +79,13 @@ async def courses(request: Request):
     return templates.TemplateResponse("courses.html", {"request": request})
 
 
+@app.get("/videoplayer", response_class=HTMLResponse)
+async def videoplayer(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("videoplayer.html", {"request": request})
+
+
 @app.get("/assignments", response_class=HTMLResponse)
 async def assignments(request: Request):
     if not is_logged_in(request):
@@ -128,6 +140,19 @@ async def paymain(request: Request):
     if not is_logged_in(request):
         return RedirectResponse("/", status_code=302)
     return templates.TemplateResponse("paymain.html", {"request": request})
+
+@app.get("/payment", response_class=HTMLResponse)
+async def payment(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("paymentpage.html", {"request": request})
+
+
+@app.get("/paysuccess", response_class=HTMLResponse)
+async def paysuccess(request: Request):
+    if not is_logged_in(request):
+        return RedirectResponse("/", status_code=302)
+    return templates.TemplateResponse("paysuccess.html", {"request": request})
 
 
 @app.get("/library_updates", response_class=HTMLResponse)
